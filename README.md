@@ -60,20 +60,32 @@ boxplot of Education Benched vs Not Benched, facet grid of Experience in Domain 
 
 Key Insights:
 Employees with PHD have more Experience in Domain than those with Masters, who in turn have more Experience in Domain than Bachelors. 
-Male employees with the same Education level have more Experience in Domain than Female employees. 
+
+Male employees with the same Education level had more Experience in Domain than Female employees. 
+
 See visualization for trend of Joining Year-Age in different Cities 
+
 See visualization of Age-Experience in Domain-Joining Year
-In every city except Pune, more employees take Leave than Not Leave. In Pune half the employees took Leave while half didn't.
+
+In every city except Pune, more employees were in 'Leave' than 'Not Leave'. In Pune the numbers were nearly half for both categories.
 
 
 Machine Learning:
 X = df.loc[:, df.columns != 'LeaveOrNot']
+
 X = X.drop(columns = ['JoiningYear', 'City', 'Age']) X 
+
 y = df.loc[:, 'LeaveOrNot']
-Labekl encoding on Gender, EverBenched and Education 
+
+Label encoding on Gender, EverBenched and Education 
+
 Logistic Regression : Accuracy score in model is 0.6654611211573237
+
 Grid Search: Accuracy score in model is 0.6672694394213382
+
 Decisiojn Tree Classifier: Accuracy score in model is 0.6618444846292948
+
+
 Random Forest Classifier: Accuracy score in model is 0.6708860759493671 * The winning model
 
 
